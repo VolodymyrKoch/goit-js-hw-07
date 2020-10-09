@@ -1,17 +1,28 @@
-// // -----task-1_modul-2----
+// // -----task-1_modul-3----
+let message = "";
+const user = {
+  age: 20,
+  hobby: "html",
+  name: "Mango",
+  premium: true,
+};
 
-// const logItems = function (array) {
-//   let result = '';
-//   for (let i = 0; i < array.length; i += 1) {
-//     result += `${i + 1} - ${array[i]}\n`;
-//   }
-//   return result;
-// };
-// console.log(logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']));
-// console.log(logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]));
-/*
- * Виклич функції для перевірки працездатності твоєї реалізації.
- */
-// logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+//Write code under this line
 
+user.mood = "happy";
+user["full time"] = true;
+user.hobby = "skydiving";
+user.premium = false;
+
+const keys = Object.keys(user);
+for (const key of keys) {
+  message = message + `${key}:${user.key}\n`;
+}
+// for (const key of keys) {
+//   message += `${key}:${user[key]}\n`;
+// }
 // // ----------------------------------------------------
+console.log(user);
+console.log(message);
+console.log(keys);
+// console.log(key);
