@@ -832,6 +832,7 @@
 // console.log(min);
 // ---------------------------
 // +++++++++++++++++++++++++практика 5 модуль===================++++++++
+// -=<<".">>=-
 // Cоздайте ф-ю конструктор, ItemToSale принимающую параметрами (size, type, color)
 //  и содержащую метод для ведения статистики продаж saveToSatatistics.
 // let statstics = {
@@ -840,39 +841,39 @@
 //     soldJackets: 0
 // }
 
-let statstics = {
-  soldTotal: 0,
-  soldTshirts: 0,
-  soldJackets: 0,
-};
+// let statstics = {
+//   soldTotal: 0,
+//   soldTshirts: 0,
+//   soldJackets: 0,
+// };
 
-function ItemToSale(size, type, color) {
-  //ф-я конструктор принимающуя параметрами (size, type, color)
-  this.size = size;
-  this.type = type;
-  this.color = color;
+// function ItemToSale(size, type, color) {
+//   //ф-я конструктор принимающуя параметрами (size, type, color)
+//   this.size = size;
+//   this.type = type;
+//   this.color = color;
 
-  this.saveToSatatistics = function () {
-    //содержащуя метод saveToSatatistics.
-    if (this.type === "Jackets") {
-      statstics.soldJackets += 1;
-      statstics.soldTotal += 1;
-    }
-    if (this.type === "Tshirts") {
-      statstics.soldTshirts += 1;
-      statstics.soldTotal += 1;
-    }
-  };
-}
-let Jackets = new ItemToSale("L", "Jackets", "tomato"); // ф-ція конструкто (обєкт  екземпляр від конструктора)
-let Tshirts = new ItemToSale("L", "Tshirts", "read");
-// console.log(Jackets);
+//   this.saveToSatatistics = function () {
+//     //содержащуя метод saveToSatatistics.
+//     if (this.type === "Jackets") {
+//       statstics.soldJackets += 1;
+//       statstics.soldTotal += 1;
+//     }
+//     if (this.type === "Tshirts") {
+//       statstics.soldTshirts += 1;
+//       statstics.soldTotal += 1;
+//     }
+//   };
+// }
+// let Jackets = new ItemToSale("L", "Jackets", "tomato"); // ф-ція конструкто (обєкт  екземпляр від конструктора)
+// let Tshirts = new ItemToSale("L", "Tshirts", "read");
+// // console.log(Jackets);
 
-Jackets.saveToSatatistics(); // виклик ф-ції конструктора
-Tshirts.saveToSatatistics();
-Jackets.saveToSatatistics();
-Tshirts.saveToSatatistics();
-console.log(statstics);
+// Jackets.saveToSatatistics(); // виклик ф-ції конструктора
+// Tshirts.saveToSatatistics();
+// Jackets.saveToSatatistics();
+// Tshirts.saveToSatatistics();
+// console.log(statstics);
 // -------------------------------------------------
 // Напишите ф-цию конструктор, которая будет создавать избирателя (name);
 // У избирателя будет метод vote(presidentName) который будет менят глобальный объект
@@ -924,14 +925,28 @@ console.log(statstics);
 // Объект, который она создаёт, должен уметь следующее:
 // Хранить «текущее значение» в свойстве value. Начальное значение устанавливается в аргументе конструктора startingValue.
 // Метод read() использует prompt для получения числа и прибавляет его к свойству value.
-// Таким образом, свойство value является текущей суммой всего, что ввёл пользователь при вызовах метода read(), с учётом начального значения startingValue.
-// Ниже вы можете посмотреть работу кода:
+// Таким образом, свойство value является текущей суммой всего, что ввёл пользователь при вызовах метода read(), с учётом
+//начального значения startingValue. Ниже вы можете посмотреть работу кода:
 // let accumulator = new Accumulator(1); // начальное значение 1
 // accumulator.read(); // прибавит ввод prompt к текущему значению
 // accumulator.read(); // прибавит ввод prompt к текущему значению
 // alert(accumulator.value); // выведет сумму этих значений
-function Accumulator(size, type, color) {
-  this.value = x;
-  this.read = x;
-}
-let accumulator = new Accumulator(1, "Jackets", "tomato"); // ф-ція конструкто (обєкт  екземпляр від конструктора)
+// function Accumulator(size, type, color) {
+//   this.value = x;
+//   this.read = x;
+// }
+// let accumulator = new Accumulator(1, "Jackets", "tomato"); // ф-ція конструкто (обєкт  екземпляр від конструктора)
+// -----------------------------------
+// ---------------ланцюжок викликів------------
+/*
+ * Фильтруем четные числа. Далее, на результате метода filter,
+ * вызываем map и множим на 2. После чего на результате
+ * метода map вызываем reverse.
+ */
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const result = numbers
+//   .filter(x => x % 2 === 0)
+//   .map(y => y * 2)
+//   .reverse();
+// console.log(result);
+// --------------------------

@@ -11,18 +11,20 @@
 //     removeItem(item) - получает товар и, если он есть, удаляет его из текущих
 
 class Storage {
-  constructor(name, room) {
-    // this.name = name;   ??????
-    // this.room = room;    ?????
-  }
+  constructor(items) {
+     this.items = items;
+      }
   getItems() {
-    return;
+    // console.log(this.items);
+    return this.items;
   }
   addItem(item) {
-    // this.sales += 1; ???
+    return this.items.push(item);
   }
   removeItem(item) {
-    let b = 2 + 2;
+    console.log(this.items.splice(this.items.indexOf(item), 1)); 
+    return (this.items);
+    
   }
 }
 
@@ -51,8 +53,8 @@ console.log(storage.getItems());
   'Дроид'
 ] */
 
-// storage.removeItem('Пролонгер');
-// console.log(storage.getItems());
+storage.removeItem('Пролонгер');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Железные жупи',
