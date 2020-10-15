@@ -591,23 +591,23 @@
 // console.log(totalYear);
 // ------------------------------------------
 // +++++++++++++++++++++++++++++new task++++++++++++++
-let worker = {
-    workSchedule: [
-        {day: 'M', hours: 9},
-        {day: 'T', hours: 10},
-        {day: 'W', hours: 11},
-        {day: 'T', hours: 5},
-        {day: 'F', hours: 12},
-        ],
-        penalty: [
-        {day: 'M', value: 0},
-        {day: 'T', value: 120},
-        {day: 'W', value: 50},
-        {day: 'T', value: 0},
-        {day: 'F', value: 35},
-        ],
-        premium: 500,
-}
+// let worker = {
+//     workSchedule: [
+//         {day: 'M', hours: 9},
+//         {day: 'T', hours: 10},
+//         {day: 'W', hours: 11},
+//         {day: 'T', hours: 5},
+//         {day: 'F', hours: 12},
+//         ],
+//         penalty: [
+//         {day: 'M', value: 0},
+//         {day: 'T', value: 120},
+//         {day: 'W', value: 50},
+//         {day: 'T', value: 0},
+//         {day: 'F', value: 35},
+//         ],
+//         premium: 500,
+// }
 // написати ф-ю getSalary(worker, rate) яка приймає аргументами обєкт робітника 
 // і погодинну ставку.
 // Ф-я вертає зарплату робітника за тиждень з урахуванням штрафів і премій
@@ -628,18 +628,18 @@ let worker = {
 //   return salary;
 // }
 // ------------стрілочною функцією----------
-const getSalary = (worker, rate) => {
-  const { workSchedule, penalty, premium } = worker;
-  const total = workSchedule.reduce((add, el) => {
-    return add += el.hours * rate}, 0)
-  const totalValue = penalty.reduce((acc, element) => {
-    return acc += element.value}, 0)
-  const salary = total - totalValue+premium;
-  return salary;
-}
+// const getSalary = (worker, rate) => {
+//   const { workSchedule, penalty, premium } = worker;
+//   const total = workSchedule.reduce((add, el) => {
+//     return add += el.hours * rate}, 0)
+//   const totalValue = penalty.reduce((acc, element) => {
+//     return acc += element.value}, 0)
+//   const salary = total - totalValue+premium;
+//   return salary;
+// }
 
-console.log(getSalary(worker, 20)); // 1235
-console.log(getSalary(worker, 8)); // 671
+// console.log(getSalary(worker, 20)); // 1235
+// console.log(getSalary(worker, 8)); // 671
 // ---------------------------------------------------------
 //  Напишите ф-ю которая принимает строку и возвращает объект с  
 // количеством  букв в строке

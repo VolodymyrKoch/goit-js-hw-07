@@ -950,3 +950,48 @@
 //   .reverse();
 // console.log(result);
 // --------------------------
+// -------------dom-----------------------
+// 2) Дан список в штмл. Вставьте в него 3 лишки с текстом
+// 3)Создайте 5 красных кругов 100х100 пикселей (стили подключаються в цсс)
+// 4)Добавьте всем дивам нумерацию (в свойство текс контент записывается какой это по счёту див)
+// 5)Создайте 3 картинки с котиками за одно операцию
+
+// // 2
+// let listref = document.querySelector("ul");
+// const arr = ["yes", "no", "maybe"]
+// // console.log(listref); 
+// for (let i = 0; i < 3; i += 1) { 
+//   const itemRef = document.createElement("li");
+//   itemRef.textContent = arr[i];
+//   listref.append(itemRef);
+// }
+// console.log(itemRef);
+// ul.querySelector() 
+// -----------------------------------------
+// 3
+// let bodyScan = document.querySelector("body"); // знайшли  ссилку на боді
+// // const divRef = document.createElement("div"); // створили div
+// // console.log(bodyScan);
+// for (let i = 0; i < 5; i += 1) { // в циклі створ 3 div
+//   const divRef = document.createElement("div");
+//   divRef.classList.add("circle")   //створюю клас 
+//   bodyScan.append(divRef);
+// }
+// // ------------------------------------------------
+// // 4
+// const divList = document.querySelectorAll("div");//знайшли всі div
+// divList.forEach((el, i) => {     //проходимось по всіх div
+//   el.textContent = `${i+1}`
+// });
+// console.log(divList);
+// -------------------------------
+// 5
+const body = document.querySelector("body") //знайти body
+// const img = document.createElement("img"); //створили картинку
+for (let i = 0; i < 3; i += 1) {
+  const img = document.createElement("img") //додаю картинку в body 3 рази через цикл
+  body.append(img);
+  let a = Math.floor(Math.random()*200)  // floor-округлили до цілого, random - запустили вивід рамдомних чисел
+  img.src = `https://picsum.photos/id/${a}/200/300`;
+ }
+
