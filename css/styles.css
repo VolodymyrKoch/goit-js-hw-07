@@ -1,6 +1,24 @@
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: tomato;
+.foto {
+  display: block;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+#gallery {
+  display: flex;
+  justify-content: space-around; /* рівномірно розставл. елементи по головній осі */
+  padding: 0px;
+  margin: 0px;
+}
+/* 6задача---- */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }

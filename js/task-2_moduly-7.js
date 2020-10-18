@@ -12,15 +12,12 @@ const ingredients = [
 // Для створення DOM - вузлів використовуй document.createElement()
 // ------------------------
 const listIngredients = document.querySelector("#ingredients");
-// console.log(listIngredients);
+console.log(listIngredients);
 const cyclicList = ingredients.forEach((el, i, arr) => {
   const creationItem = document.createElement("li");
   creationItem.textContent = el;
+  listIngredients.appendChild(creationItem)
+  
+  console.log(creationItem);
+  });
 
-  // cyclicList.append(creationItem);
-  // return listIngredients;
-    // console.log(el);
-    console.log(creationItem);
-});
-// cyclicList()
-console.log(cyclicList);
