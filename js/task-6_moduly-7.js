@@ -8,15 +8,12 @@
 
 const inputScanRef = document.querySelector("#validation-input");
 const inputAtrref = document.querySelector('[data-length="6"]');
-// console.log(inputAtrref.dataset.length);
 
-inputScanRef.addEventListener("blur", (event) => { 
-  // console.log(inputScanRef.value);
-  if (inputScanRef.value.length === Number(inputAtrref.dataset.length)) {
+inputScanRef.addEventListener("blur", () => { 
+    if (inputScanRef.value.length === Number(inputAtrref.dataset.length)) {
     inputScanRef.classList.add('valid')
     inputScanRef.classList.remove('invalid')
   }
   else { inputScanRef.classList.add('invalid') 
   inputScanRef.classList.remove('valid')}
-   
-})
+   })

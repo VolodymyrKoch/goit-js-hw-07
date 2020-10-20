@@ -7,10 +7,8 @@ const counterRef = document.querySelector("#counter");
 const decrementRef = document.querySelector('[data-action="decrement"]');
 const incrementRef = document.querySelector('[data-action="increment"]');
 const spanRef = document.querySelector("#value");
-console.log(spanRef);
 
 let counterValue = 0;
-
  decrementRef.addEventListener("click", (e) => {
   counterValue -=1;
   spanRef.textContent = `${counterValue}`;

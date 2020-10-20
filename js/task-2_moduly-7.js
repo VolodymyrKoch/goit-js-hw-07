@@ -13,11 +13,9 @@ const ingredients = [
 // ------------------------
 const listIngredients = document.querySelector("#ingredients");
 console.log(listIngredients);
-const cyclicList = ingredients.forEach((el, i, arr) => {
+const cyclicList = ingredients.forEach((el) => {
   const creationItem = document.createElement("li");
   creationItem.textContent = el;
   listIngredients.appendChild(creationItem)
-  
-  console.log(creationItem);
   });
 

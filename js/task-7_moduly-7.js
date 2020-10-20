@@ -4,7 +4,7 @@
 // змінюватиметься розмір тексту.
 const sizeControleRef = document.querySelector('#font-size-control');
 const spanSizeRef = document.querySelector('#text');
-console.log(spanSizeRef);
-sizeControleRef.addEventListener('input', (e) => { 
-  spanSizeRef ? spanSizeRef.style.fontSize = `${sizeControleRef.value}px` : "";
+
+sizeControleRef.addEventListener('input', () => { 
+   spanSizeRef.style.fontSize = `${sizeControleRef.value}px`;
 });

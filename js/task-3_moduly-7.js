@@ -24,12 +24,10 @@ const images = [
 //     Додай мінімальне оформлення галереї флексбоксами або грід через   css-класи.
 
 const galleryImg = document.querySelector("#gallery");
-console.log(galleryImg);
 const fotos = document.querySelector(".foto");
-const cyclicListImg = images.forEach((el) => { 
-const itemImg = document.createElement("li");
-  console.log(itemImg);
-  const galleryСards = galleryImg.insertAdjacentHTML("beforeend",`<img class="foto" src="${el.url}" alt="${el.alt}"/>`)
+ images.forEach((el) => { 
+ document.createElement("li");
+ galleryImg.insertAdjacentHTML("beforeend",`<img class="foto" src="${el.url}" alt="${el.alt}"/>`)
 });
 
 
